@@ -16,17 +16,17 @@ body{
 .container{
     width: 960px;
 }
-.header{
+header{
     width: 960px;
     height: 85px;
 }
-.header h1{
+header h1{
     color: #ffffff;
     float: left;
     font-size: 43px;
     padding: 20px 0 0 20px;
 }
-.header h2{
+header h2{
     float: right;
     padding: 40px 20px 0 0;
     color: #A9D1FA;
@@ -97,7 +97,7 @@ body{
 }
 
 /* COntent */
-.content{
+section{
     background-color: #ffffff;
     width: 680px;
     margin-top: 15px;
@@ -166,4 +166,12 @@ p{
 label{
     display: inline-block;
     width:150px;
+}
+footer{
+    clear: both;
+    text-align: center;
+    color: #ffffff;
+    background-color: #000000;
+    margin: 70px 0 0 0;
+    padding: 10px 0;
 }
