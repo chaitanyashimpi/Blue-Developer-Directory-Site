@@ -51,11 +51,11 @@
 				</p>
 				<p>
 					<label for="email">Email Address: </label>
-					<input type="text" name="email">
+					<input type="email" name="email">
 				</p>
 				<p>
 					<label for="phone">Phone Number: </label>
-					<input type="text" name="phone">
+					<input type="tel" name="phone">
 				</p>
 				<p>
 					<label for="call">Best Time To Call: </label>
@@ -64,33 +64,45 @@
 					<input type="radio" name="time" value="evening"> Evening
 				</p>
 				<p>
-					<label for="budget">Budget: </label>
-					<select type="list" name="budget">
-						<option selected disabled>--Please Select--</option>
-						<option value="100-500">$100 - $500</option>
-						<option value="500-1000">$500 - $1000</option>
-						<option value="1000-2000">$1000 - $2000</option>
-						<option value="2000+">$2000+</option>
-						<option value="not sure">Not Sure</option>
-					</select>
+					<label for="location">Location:</label>
+					<input list="location">
+					<datalist id="location">
+						<option value="India">
+						<option value="New York">
+						<option value="Boston">
+						<option value="America">
+					</datalist>
 				</p>
-				<p>
-					<label for="call">Services Needed: (Check all that apply) </label>
-					<table>
-						<tr>
-							<td><input type="checkbox" name="services" value="html">html</td>
-							<td><input type="checkbox" name="services" value="php">PHP</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="services" value="asp">ASP</td>
-							<td><input type="checkbox" name="services" value="java">Java</td>
-						</tr>
-						<tr>
-							<td><input type="checkbox" name="services" value="c">C++</td>
-							<td><input type="checkbox" name="services" value="design">Design</td>
-						</tr>
-					</table>
-				</p>
+				<fieldset>
+					<legend>About Your Project</legend>
+					<p>
+						<script>
+							function updateTextInput(val){
+								document.getElementById('textInput').value=val;
+							}
+						</script>
+						<label for="budget">Budget: </label>
+						<input type="range" name="budget" min="500" max="10000" onchange="updateTextInput(this.value)">
+						<label for="textInput" id="textInput"></label>
+					</p>
+					<p>
+						<label for="call">Services Needed: (Check all that apply) </label>
+						<table>
+							<tr>
+								<td><input type="checkbox" name="services" value="html">html</td>
+								<td><input type="checkbox" name="services" value="php">PHP</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="services" value="asp">ASP</td>
+								<td><input type="checkbox" name="services" value="java">Java</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" name="services" value="c">C++</td>
+								<td><input type="checkbox" name="services" value="design">Design</td>
+							</tr>
+						</table>
+					</p>
+				</fieldset>
 				<p>
 					<input type="submit" value="Submit Inquiry">
 				</p>
